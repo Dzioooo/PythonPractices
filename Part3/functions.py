@@ -5,6 +5,11 @@ import csv
 
 
 def check_input(gender):
+    """
+    this function checks the user input first before it returns the
+    user_input, generates an error message if user enters an invalid
+    selection
+    """
     user_input = None
 
     while user_input is None or user_input != 5:
@@ -20,6 +25,17 @@ def check_input(gender):
 
 
 def create_panthera(male_panthera, female_panthera):
+    """
+    returns the randomized offspring gender and also the offspring's
+    generated name
+
+    Functions called:
+        male_names = returns the name of the combined male and female
+        panthera parents if the randomized gender is male.
+
+        female_names = returns the name of the combined male and female
+        panthera parents if the randomized gender is female.
+    """
     random_gender = [male_panthera.gender, female_panthera.gender]
     randomized_gender = random.choice(random_gender)
 
@@ -34,6 +50,9 @@ def create_panthera(male_panthera, female_panthera):
 
 
 def instances_to_csv():
+    """
+    converts all panthera objects/instances to a csv file
+    """
     csv_file_path = 'Part3/panthera_breeds.csv'
     panthera_instances = Panthera.sorted_instances()
 
@@ -48,6 +67,10 @@ def instances_to_csv():
 
 
 def print_pantheras(gender):
+    """
+    prints first generation female and male pantheras for the selection
+    menu.
+    """
     dictionary = dictionaries.object_dictionary()
 
     if gender == "male":

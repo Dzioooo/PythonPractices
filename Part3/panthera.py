@@ -15,8 +15,11 @@ class Panthera():
                    instance in Panthera.all_instance):
             Panthera.all_instance.append(self)
 
-    """
     def check_instance_gender(self):
+        """
+        disregard this function, this function is supposedly for the
+        bonus item
+        """
         if self.gender == "Male" and not any(instance.name == self.name for
                                              instance in
                                              Panthera.male_instance):
@@ -25,10 +28,6 @@ class Panthera():
                                                  instance in
                                                  Panthera.female_instance):
             Panthera.female_instance.append(self)
-    """
-
-    # def __str__(self):
-    #     return f"{self.name}, {self.generation}, {self.gender}"
 
     def __lt__(self, other):
         if isinstance(other, Panthera):
@@ -42,10 +41,18 @@ class Panthera():
 
     @classmethod
     def male_instances(cls):
+        """
+        disregard this function, this function is supposedly for the
+        bonus item
+        """
         return cls.male_instance
 
     @classmethod
     def female_instances(cls):
+        """
+        disregard this function, this function is supposedly for the
+        bonus item
+        """
         return cls.female_instance
 
 
