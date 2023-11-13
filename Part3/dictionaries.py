@@ -58,8 +58,8 @@ def object_dictionary():
         (subclass of Panthera class in panthera.py)
     '''
     lion = Lion('Lion', 1, 'Male')
-    tiger = Tiger('Tigress', 1, 'Male')
-    jaguar = Jaguar('Jaguard', 1, 'Male')
+    tiger = Tiger('Tiger', 1, 'Male')
+    jaguar = Jaguar('Jaguar', 1, 'Male')
     leopard = Leopard('Leopard', 1, 'Male')
 
     ''' Dictionary for Female and Male Pantheras '''

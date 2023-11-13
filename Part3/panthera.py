@@ -30,12 +30,20 @@ class Panthera():
             Panthera.female_instance.append(self)
 
     def __lt__(self, other):
+        """
+        magic function which sorts all Panthera objects by generation
+        and name
+        """
         if isinstance(other, Panthera):
             return (self.generation, self.name) < (other.generation,
                                                    other.name)
 
     @classmethod
     def sorted_instances(cls):
+        """
+        class method that returns the sorted instances or objects of
+        Panthera
+        """
         sorted_instances = sorted(cls.all_instance)
         return sorted_instances
 
